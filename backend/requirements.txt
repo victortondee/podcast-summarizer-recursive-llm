@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic-ai
+python-dotenv
+httpx
+anyio
+pydantic
+numpy
+scipy
+sympy

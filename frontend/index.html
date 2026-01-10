@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLM - Recursive Language Model</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="gradient-text">RLM</span>
+                <span class="version">v1.0</span>
+            </div>
+            <h1>Recursive Language Model</h1>
+            <p class="subtitle">Managing context through code and delegation</p>
+        </header>
+
+        <main>
+            <section class="input-section glass">
+                <div class="field">
+                    <label for="prompt">Task Prompt</label>
+                    <textarea id="prompt" placeholder="e.g. Summarize these documents and find key insights..."></textarea>
+                </div>
+                <div class="field">
+                    <label for="inputData">Input Data (Massive Text)</label>
+                    <textarea id="inputData" class="code-font" placeholder="Paste your large dataset here..."></textarea>
+                </div>
+                <div class="controls">
+                    <div class="iterations">
+                        <label for="maxIterations">Max Iterations:</label>
+                        <input type="number" id="maxIterations" value="5" min="1" max="10">
+                    </div>
+                    <button id="runBtn" class="primary-btn">Initialize RLM Loop</button>
+                </div>
+            </section>
+
+            <section id="executionLog" class="log-section glass hidden">
+                <h2>Execution Thinking Log</h2>
+                <div id="logContent" class="log-content code-font"></div>
+            </section>
+
+            <section id="resultSection" class="result-section glass hidden">
+                <h2>Final Answer</h2>
+                <div id="finalContent" class="final-content"></div>
+                <div class="result-meta">
+                    <span id="iterCount"></span>
+                    <button id="resetBtn" class="secondary-btn">New Task</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by PydanticAI & FastAPI</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
