@@ -95,8 +95,25 @@ OPENAI_MODEL_NAME=meta-llama/llama-3.1-70b-instruct
 python main.py
 
 # Launch Frontend
-# Open frontend/index.html in any browser
+# Open http://localhost:8000 in your browser
 ```
+
+## Deploy To Railway
+
+1. Push this repo to GitHub.
+2. In Railway, create a new project and choose **Deploy from GitHub repo**.
+3. Set environment variables in Railway:
+   - `OPENAI_API_BASE`
+   - `OPENAI_API_KEY`
+   - `OPENAI_MODEL_NAME`
+4. Optional but recommended for persistent users/credits:
+   - Add a Railway volume mounted at `/data`
+   - Set `RLM_DB_PATH=/data/rlm_auth.db`
+5. Deploy. Railway will use:
+   - `requirements.txt` (root) for dependencies
+   - `Procfile` for start command (`uvicorn backend.main:app ...`)
+
+After deployment, open your Railway public URL and use the app normally.
 
 ---
 

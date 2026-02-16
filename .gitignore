@@ -46,3 +46,4 @@ test_agent_output.txt
 *.log
 blog_rlm_game_changer.txt
 blogwriter.md
+backend/rlm_auth.db

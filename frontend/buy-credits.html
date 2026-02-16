@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Credits - RLM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <main class="glass buy-page">
+            <h2>Buy More Credits</h2>
+            <p class="subtitle">Choose how you want to buy your credits.</p>
+            <form id="buyCreditsForm">
+                <div class="field">
+                    <label for="creditAmount">Credits to buy</label>
+                    <input id="creditAmount" class="auth-input" type="number" min="1" max="1000" value="10" required>
+                </div>
+
+                <div class="field">
+                    <label for="purchasePlan">Purchase type</label>
+                    <select id="purchasePlan" class="auth-input">
+                        <option value="one_time">One-time purchase</option>
+                        <option value="monthly">Monthly auto top-up</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="paymentMethod">Payment method</label>
+                    <select id="paymentMethod" class="auth-input">
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+
+                <p class="auth-message hidden" id="buyMessage"></p>
+                <div class="auth-actions">
+                    <button id="confirmBuyBtn" class="primary-btn" type="submit">Continue to Checkout</button>
+                    <button id="backToAppBtn" class="secondary-btn" type="button">Back to App</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="buy-credits.js"></script>
+</body>
+</html>
