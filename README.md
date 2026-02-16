@@ -148,5 +148,9 @@ After deployment, open your Railway public URL and use the app normally.
 - **[Python REPL](https://docs.python.org/3/library/functions.html#exec)**: Secure evaluation sandbox.
 - **Modern HTML/CSS**: Glassmorphic dark-mode frontend.
 
+## Core Reference
+This project's core approach and baseline inspiration came from:  
+**[deviprasadshetty-dev/Recursive-LLM](https://github.com/deviprasadshetty-dev/Recursive-LLM)**
+
 ---
 *Built with ❤️ for the future of agentic AI.*
