@@ -231,6 +231,16 @@ textarea:focus {
     flex-wrap: wrap;
 }
 
+.inline-credits {
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(0, 0, 0, 0.35);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
 .iterations {
     display: flex;
     align-items: center;

@@ -16,6 +16,7 @@ const appSection = document.getElementById('appSection');
 const userBar = document.getElementById('userBar');
 const userEmail = document.getElementById('userEmail');
 const userCredits = document.getElementById('userCredits');
+const inlineCredits = document.getElementById('inlineCredits');
 const logoutBtn = document.getElementById('logoutBtn');
 const authMessage = document.getElementById('authMessage');
 const authForm = document.getElementById('authForm');
@@ -98,6 +99,7 @@ function showLogin(message = '') {
 function syncCreditsState() {
     const credits = Number(currentUser?.credits ?? 0);
     userCredits.textContent = `Credits: ${credits}/10`;
+    if (inlineCredits) inlineCredits.textContent = `Credits: ${credits}/10`;
     if (credits <= 0) {
         creditsBanner.classList.remove('hidden');
         runBtn.disabled = true;
